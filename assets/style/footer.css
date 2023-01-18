@@ -5,7 +5,7 @@ footer {
     font-size: 13px;
     line-height: 20px;
     padding: 50px 0 30px;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
@@ -122,12 +122,16 @@ footer .copyright{
     .bottom_line span {
         background-color: transparent;
     }
+   
 }
 
 @media only screen and (max-width: 768px) {
     .col .social_icons {
         display: grid;
         grid-template-columns: 2fr 2fr;
+    }
+    li {
+        text-decoration: underline #A4D5B4;
     }
 }
 

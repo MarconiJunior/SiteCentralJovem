@@ -3,25 +3,45 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Alegreya Sans SC", sans-serif;
+    scrollbar-width: thin;
 }
 
-body {
+
+html, body {
     background-color: #FAFAFA;
     height: 100%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+section {
+    display: block;
+    padding-bottom: 30rem;
+}
+
+.content {
+    width: 100% !important;
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .verse {
-    position: absolute;
-    width: 1206px;
+    position: relative;
+    width: 60%;
     height: 120px;
     left: calc(50% - 1206px/2);
-    top: 348px;
+    top: 100px;
     background: #D4E9E2;
     padding: 2.5rem 4.8rem;
+    text-align: center;
 }
-
-.text {
-    text-align:center;
-}
-
 

@@ -23,11 +23,6 @@
     text-decoration: none;
   }
   
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
   .bd-grid {
     max-width: 1024px;
     display: -ms-grid;
@@ -43,6 +38,7 @@
     width: 100%;
     height: var(--header-height);
     position: relative;
+    margin-bottom: 100px;
     top: 0;
     left: 0;
     padding: 0 1.5rem;

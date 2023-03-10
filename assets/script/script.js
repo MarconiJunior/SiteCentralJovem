@@ -27,46 +27,19 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
+//carousel
 
-/* slideshow code */
+const carousel = document.querySelector(".carousel");
+const carouselInner = document.querySelector(".carousel-inner");
+const carouselItem = document.querySelectorAll(".carousel-item");
 
-var slideIndex = 0;
-showSlides(slideIndex);
+let currentIndexSlide = 0;
+const slideWidth = carouselItem[0].clientWidth;
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-
-    if (n > slides.length) {
-        slideIndex = 1
+setInterval(() => {
+    currentIndexSlide++;
+    if (currentIndexSlide >= carouselItem.length) {
+        currentIndexSlide = 0;
     }
-
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active");
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active");
-    setTimeout(showSlides, 3000);
-}
+    carouselInner.style.transform = `translateX(-${currentIndexSlide * slideWidth}px)`;
+}, 4000);

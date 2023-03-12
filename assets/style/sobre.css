@@ -53,6 +53,12 @@ section {
     font-size: 2rem;
 }
 
+.objetivos {
+    list-style-type: none;
+    padding-left: 1rem;
+    margin: 10rem;
+}
+
 @media screen and (max-width: 1600px) {
     .left__side img {
         width: 15rem;
@@ -61,6 +67,16 @@ section {
 
     .right__side {
         padding: 2rem;
+    }
+
+    .objetivos {
+        list-style-type: none;
+        padding-left: 1rem;
+        margin: 7rem;
+    }
+
+    .objetivos li {
+        text-decoration: none;
     }
 }
 
